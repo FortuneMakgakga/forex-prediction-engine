@@ -185,7 +185,7 @@ def build_dataset(pair="EURUSD=X", period="30d", interval="1h", ird_history_days
 if __name__ == "__main__":
     pair = "EURUSD=X"
     print(f"Collecting dataset for {pair}...")
-    df = build_dataset(pair, period="120d", interval="1h", ird_history_days=365)  # fetch IRD last 90 days
+    df = build_dataset(pair, period="730d", interval="1h", ird_history_days=365)  # fetch IRD last 90 days
     df.to_csv(f"{pair}_feature_data.csv")
     print(f"Saved file: {pair}_feature_data.csv")
     print("\nPreview:")
